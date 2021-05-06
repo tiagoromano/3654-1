@@ -75,6 +75,29 @@
                     </webResources>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>npm-install-web</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                        <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                        <skip>false</skip>
+                        <executable>bash</executable>
+                        <arguments>
+                            <argument>-c</argument>
+                            <argument>npm install</argument>
+                        </arguments>
+                        <workingDirectory>src/main/webapp</workingDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <repositories>
