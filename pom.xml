@@ -109,7 +109,7 @@
                             <argument>-c</argument>
                             <argument>npm install</argument>
                         </arguments>
-                        <workingDirectory>src/main/mobileapp</workingDirectory>
+                        <workingDirectory>src/main/mobileapp/www</workingDirectory>
                         </configuration>
                     </execution>
                 </executions>
