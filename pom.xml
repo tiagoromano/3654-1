@@ -96,6 +96,22 @@
                         <workingDirectory>src/main/webapp</workingDirectory>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>npm-install-mobile</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                        <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                        <skip>false</skip>
+                        <executable>bash</executable>
+                        <arguments>
+                            <argument>-c</argument>
+                            <argument>npm install</argument>
+                        </arguments>
+                        <workingDirectory>src/main/mobileapp</workingDirectory>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
